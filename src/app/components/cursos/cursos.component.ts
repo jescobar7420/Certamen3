@@ -10,7 +10,6 @@ import { MateriasService } from 'src/app/services/materias/materias.service';
 })
 export class CursosComponent implements OnInit {
   
-  
   public bandera:boolean;
   formulario: FormGroup;
   
