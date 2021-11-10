@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="col-8"  *ngFor="let item of materias">
+        <div class="row" *ngIf="item.nota <= 6 && item.nota >= 4" ngClass="amarillo">
+            <div class="col nombre">{{item.nombre}}</div>
+            <div class="col">Promedio hasta ahora = {{item.nota}}</div>
+            <div class="col"><span class="material-icons">sentiment_dissatisfied</span></div>
+        </div>
+        <div class="row" *ngIf="item.nota < 4" ngClass="rojo">
+            <div class="col nombre">{{item.nombre}}</div>
+            <div class="col">Promedio hasta ahora = {{item.nota}}</div>
+            <div class="col"><span class="material-icons">sentiment_dissatisfied</span></div>
+        </div>
+        <div class="row" *ngIf="item.nota > 6" ngClass="blanco">
+            <div class="col nombre">{{item.nombre}}</div>
+            <div class="col">Promedio hasta ahora = {{item.nota}}</div>
+            <div class="col"><span class="material-icons">sentiment_satisfied_alt</span></div>
+
+        </div>
+    </div>
+</div>

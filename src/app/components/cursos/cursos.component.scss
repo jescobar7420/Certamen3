@@ -1,0 +1,50 @@
+.ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid #42A948; /* green */
+}
+  
+.ng-invalid:not(form)  {
+    border-left: 5px solid #a94442; /* red */
+}
+  
+.alert div {
+    background-color: #fed3d3;
+    color: #820000;
+}
+  
+.form-group {
+    margin-bottom: 1rem;
+}
+  
+label {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
+  
+select {
+    width: 100%;
+    padding: .5rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    margin-top: 10px;
+}
+
+form {
+    width: 50%;
+}
+
+h4 { 
+    margin-top: 10px;
+    text-align: center;
+}
+
+.submitted-message p {
+    font-size: 24px;
+    margin-top: 32px;
+    text-align: center;
+}

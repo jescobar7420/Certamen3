@@ -1,0 +1,210 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <h4>Crear Curso</h4>
+        
+        <form class="form" [formGroup]="formulario" #formDir="ngForm" novalidate (submit)="onSubmit()">
+        
+            <div [hidden]="formDir.submitted">
+                
+                <div class="cross-validation" [class.cross-validation-error]="(formulario.touched || formulario.dirty)">
+                    <ul>
+                        <li>
+                            <label for="nombre">Nombre</label>
+                            <input type="text" formControlName="nombre" class="form-control" id="nombre" placeholder="Nombre del Curso" required>
+                            
+                            <div *ngIf="formulario.get('nombre')?.invalid && (formulario.get('nombre')?.dirty || formulario.get('nombre')?.touched)" class="alert alert-danger">
+                            
+                                <div *ngIf="formulario.get('nombre')?.errors?.required">
+                                    Campo obligatorio.
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="nota1">Nota 1</label>
+                                    <input type="number" formControlName="nota1" class="form-control" id="nota1" placeholder="1.0 - 7.0" required>
+                                    
+                                    <div *ngIf="formulario.get('nota1')?.invalid && (formulario.get('nota1')?.dirty || formulario.get('nota1')?.touched)" class="alert alert-danger">
+                                    
+                                        <div *ngIf="formulario.get('nota1')?.errors?.required">
+                                            Campo obligatorio.
+                                        </div>
+                                        
+                                        <div *ngIf="(formulario.get('nota1')?.errors?.min || formulario.get('nota1')?.errors?.max)">
+                                            La nota debe estar dentro del rango [1.0 - 7.0]
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="porcentaje1">Porcentaje</label>
+                                    <input type="number" formControlName="porcentaje1" class="form-control" id="porcentaje1" placeholder="0 - 100" required>
+                                    
+                                    <div *ngIf="formulario.get('porcentaje1')?.invalid && (formulario.get('porcentaje1')?.dirty || formulario.get('porcentaje1')?.touched)" class="alert alert-danger">
+                                    
+                                        <div *ngIf="formulario.get('porcentaje1')?.errors?.required">
+                                            Campo obligatorio.
+                                        </div>
+                                        
+                                        <div *ngIf="(formulario.get('porcentaje1')?.errors?.min || formulario.get('porcentaje1')?.errors?.max)">
+                                            El porcentaje debe estar dentro del rango [0 - 100]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="nota2">Nota 2</label>
+                                    <input type="number" formControlName="nota2" class="form-control" id="nota2" placeholder="1.0 - 7.0" required>
+                                    
+                                    <div *ngIf="formulario.get('nota2')?.invalid && (formulario.get('nota2')?.dirty || formulario.get('nota2')?.touched)" class="alert alert-danger">
+                                    
+                                        <div *ngIf="formulario.get('nota2')?.errors?.required">
+                                            Campo obligatorio.
+                                        </div>
+                                        
+                                        <div *ngIf="(formulario.get('nota2')?.errors?.min || formulario.get('nota2')?.errors?.max)">
+                                            La nota debe estar dentro del rango [1.0 - 7.0]
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="porcentaje2">Porcentaje</label>
+                                    <input type="number" formControlName="porcentaje2" class="form-control" id="porcentaje2" placeholder="0 - 100" required>
+                                    
+                                    <div *ngIf="formulario.get('porcentaje2')?.invalid && (formulario.get('porcentaje2')?.dirty || formulario.get('porcentaje2')?.touched)" class="alert alert-danger">
+                                    
+                                        <div *ngIf="formulario.get('porcentaje2')?.errors?.required">
+                                            Campo obligatorio.
+                                        </div>
+                                        
+                                        <div *ngIf="(formulario.get('porcentaje2')?.errors?.min || formulario.get('porcentaje2')?.errors?.max)">
+                                            El porcentaje debe estar dentro del rango [0 - 100]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="nota3">Nota 3</label>
+                                    <input type="number" formControlName="nota3" class="form-control" id="nota3" placeholder="1.0 - 7.0" required>
+                                    
+                                    <div *ngIf="formulario.get('nota3')?.invalid && (formulario.get('nota3')?.dirty || formulario.get('nota3')?.touched)" class="alert alert-danger">
+                                    
+                                        <div *ngIf="formulario.get('nota3')?.errors?.required">
+                                            Campo obligatorio.
+                                        </div>
+                                        
+                                        <div *ngIf="(formulario.get('nota3')?.errors?.min || formulario.get('nota3')?.errors?.max)">
+                                            La nota debe estar dentro del rango [1.0 - 7.0]
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="porcentaje3">Porcentaje</label>
+                                    <input type="number" formControlName="porcentaje3" class="form-control" id="porcentaje3" placeholder="0 - 100" required>
+                                    
+                                    <div *ngIf="formulario.get('porcentaje3')?.invalid && (formulario.get('porcentaje3')?.dirty || formulario.get('porcentaje3')?.touched)" class="alert alert-danger">
+                                    
+                                        <div *ngIf="formulario.get('porcentaje3')?.errors?.required">
+                                            Campo obligatorio.
+                                        </div>
+                                        
+                                        <div *ngIf="(formulario.get('porcentaje3')?.errors?.min || formulario.get('porcentaje3')?.errors?.max)">
+                                            El porcentaje debe estar dentro del rango [0 - 100]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="nota4">Nota 4</label>
+                                    <input type="number" formControlName="nota4" class="form-control" id="nota4" placeholder="1.0 - 7.0" required>
+                                    
+                                    <div *ngIf="formulario.get('nota4')?.invalid && (formulario.get('nota4')?.dirty || formulario.get('nota4')?.touched)" class="alert alert-danger">
+                                    
+                                        <div *ngIf="formulario.get('nota4')?.errors?.required">
+                                            Campo obligatorio.
+                                        </div>
+                                        
+                                        <div *ngIf="(formulario.get('nota4')?.errors?.min || formulario.get('nota4')?.errors?.max)">
+                                            La nota debe estar dentro del rango [1.0 - 7.0]
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="porcentaje4">Porcentaje</label>
+                                    <input type="number" formControlName="porcentaje4" class="form-control" id="porcentaje4" placeholder="0 - 100" required>
+                                    
+                                    <div *ngIf="formulario.get('porcentaje4')?.invalid && (formulario.get('porcentaje4')?.dirty || formulario.get('porcentaje4')?.touched)" class="alert alert-danger">
+                                    
+                                        <div *ngIf="formulario.get('porcentaje4')?.errors?.required">
+                                            Campo obligatorio.
+                                        </div>
+                                        
+                                        <div *ngIf="(formulario.get('porcentaje4')?.errors?.min || formulario.get('porcentaje4')?.errors?.max)">
+                                            El porcentaje debe estar dentro del rango [0 - 100]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="nota5">Nota 5</label>
+                                    <input type="number" formControlName="nota5" class="form-control" id="nota5" placeholder="1.0 - 7.0" required>
+                                    
+                                    <div *ngIf="formulario.get('nota5')?.invalid && (formulario.get('nota5')?.dirty || formulario.get('nota5')?.touched)" class="alert alert-danger">
+                                    
+                                        <div *ngIf="formulario.get('nota5')?.errors?.required">
+                                            Campo obligatorio.
+                                        </div>
+                                        
+                                        <div *ngIf="(formulario.get('nota5')?.errors?.min || formulario.get('nota5')?.errors?.max)">
+                                            La nota debe estar dentro del rango [1.0 - 7.0]
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="porcentaje5">Porcentaje</label>
+                                    <input type="number" formControlName="porcentaje5" class="form-control" id="porcentaje5" placeholder="0 - 100" required>
+                                    
+                                    <div *ngIf="formulario.get('porcentaje5')?.invalid && (formulario.get('porcentaje5')?.dirty || formulario.get('porcentaje5')?.touched)" class="alert alert-danger">
+                                    
+                                        <div *ngIf="formulario.get('porcentaje5')?.errors?.required">
+                                            Campo obligatorio.
+                                        </div>
+                                        
+                                        <div *ngIf="(formulario.get('porcentaje5')?.errors?.min || formulario.get('porcentaje5')?.errors?.max)">
+                                            El porcentaje debe estar dentro del rango [0 - 100]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <button class="btn btn-primary" id="botonCrear" type="submit" [disabled]="formulario.invalid" onchange="calcularPorcentaje()">Crear</button>
+                            <button class="btn btn-secundary" type="reset">Cancelar</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </form>
+        
+        <div class="submitted-message" *ngIf="formDir.submitted && !bandera">
+            <p>Curso agregado con éxito!</p>
+        </div>
+
+        <div class="submitted-message" *ngIf="formDir.submitted && bandera">
+            <p>Error al crear curso</p>
+        </div>
+
+    </div>
+</div>
